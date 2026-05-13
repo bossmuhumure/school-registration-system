@@ -1,0 +1,57 @@
+body{
+  font-family: Arial;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1{
+  text-align: center;
+  color: darkblue;
+}
+
+.form{
+  margin-bottom: 20px;
+}
+
+input{
+  width: 30%;
+  padding: 10px;
+  margin: 5px;
+}
+
+button{
+  padding: 10px 20px;
+  background: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover{
+  background: darkblue;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td{
+  border: 1px solid gray;
+  padding: 10px;
+  text-align: center;
+}
+
+th{
+  background: darkblue;
+  color: white;
+}
