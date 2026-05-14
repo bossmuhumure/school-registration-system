@@ -44,19 +44,47 @@ function addStudent(){
   const name =
     document.getElementById("name").value;
 
-  const course =
-    document.getElementById("course").value;
+  const course1 =
+    document.getElementById("course1").value;
 
-  const marks =
-    Number(document.getElementById("marks").value);
+  const marks1 =
+    Number(document.getElementById("marks1").value);
 
+  const course2 =
+    document.getElementById("course2").value;
+
+  const marks2 =
+    Number(document.getElementById("marks2").value);
+
+    
+  const course3 =
+    document.getElementById("course3").value;
+     const marks3 =
+    Number(document.getElementById("marks3").value);
+
+   const total=
+        marks1+marks2+marks3;
+
+        const average=total/3;
+
+
+ 
   // CREATE OBJECT
   const student = {
     name: name,
-    course: course,
-    marks: marks,
-    grade: calculateGrade(marks),
-    status: getStatus(marks)
+    course1: course1,
+    marks1: marks1,
+
+
+     course2: course2,
+    marks2: marks2,
+
+     course3: course3,
+    marks3: marks3,
+    average:average,
+
+    grade: calculateGrade(average),
+    status: getStatus(average)
   };
 
   // PUSH OBJECT INTO ARRAY
@@ -67,8 +95,14 @@ function addStudent(){
 
   // CLEAR INPUTS
   document.getElementById("name").value = "";
-  document.getElementById("course").value = "";
-  document.getElementById("marks").value = "";
+  document.getElementById("course1").value = "";
+  document.getElementById("marks1").value = "";
+
+   document.getElementById("course2").value = "";
+  document.getElementById("marks2").value = "";
+
+   document.getElementById("course3").value = "";
+  document.getElementById("marks3").value = "";
 }
 
 // FUNCTION TO DISPLAY RESULTS
@@ -85,14 +119,22 @@ function displayResults(){
     resultBody.innerHTML += `
       <tr>
         <td>${student.name}</td>
-        <td>${student.course}</td>
-        <td>${student.marks}</td>
+        <td>${student.course1}</td>
+        <td>${student.marks1}</td>
+
+        <td>${student.course2}</td>
+        <td>${student.marks2}</td>
+
+        <td>${student.course3}</td>
+        <td>${student.marks3}</td>
         <td>${student.grade}</td>
         <td>${student.status}</td>
+        <td>${student.average.toFixed(2)}</td>
       </tr>
     `;
   });
 }
+
 
 
 
